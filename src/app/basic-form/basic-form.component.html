@@ -1,0 +1,36 @@
+<div class="form-container">
+  <div class="form-title">Basic Form</div>
+
+    <div class="p-fluid">
+      <div class="p-field">
+        <label for="username">Username</label>
+        <input id="username" type="text" pInputText [(ngModel)]="userName" >
+        <!-- TODO: Add validation message for username -->
+        <!-- <small *ngIf="usernameError" class="p-error">Username is required and must be at least 3 characters long.</small> -->
+      </div>
+      <div class="p-field">
+        <label for="email">Email</label>
+        <input id="email" type="email" pInputText [(ngModel)]="email">
+        <!-- TODO: Add validation message for email -->
+        <!-- <small *ngIf="emailError" class="p-error">Enter a valid email address.</small> -->
+      </div>
+      <div class="p-field">
+        <label for="birthdate">Birthdate</label>
+        <p-calendar id="birthdate" [(ngModel)]="birthdate"></p-calendar>
+        <!-- TODO: Add validation message for birthdate -->
+        <!-- <small *ngIf="birthdateError" class="p-error">Birthdate is required.</small> -->
+      </div>
+      <div class="p-field">
+        <label for="gender">Gender</label>
+        <p-dropdown id="gender" [options]="genders" [(ngModel)]="selectedGender"
+                    placeholder="Select a Gender"></p-dropdown>
+        <!-- TODO: Add validation message for gender -->
+        <!-- <small *ngIf="genderError" class="p-error">Gender is required.</small> -->
+      </div>
+      <div class="p-field">
+        <button pButton type="button" label="Submit" (click)="onSubmit()"></button>
+        <!-- TODO: Add loading spinner here when form is being submitted -->
+      </div>
+    </div>
+</div>
+
